@@ -24,23 +24,68 @@ import java.util.Scanner;
 public class MultiDimensionalArray4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+ //       StringBuilder output = new StringBuilder();
         int n = scanner.nextInt();
         int m = scanner.nextInt();
         int[][] inputArray = new int[n][m];
 
-        for (int i = 0; i < n; i++) {
+   /*     for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 int val = (i + 1) * 10 + j + 1;
                 inputArray[i][j] = val;
             }
+        }*/
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+//                System.out.print("Number " + (j + 1) + ": ");
+                inputArray[i][j] = scanner.nextInt();
+              //  output.append("\n").append(inputArray[i][j]);
+            }
+ //           System.out.println( " " );
+
         }
 
+//        System.out.println(output);
+
         for (int i = 0; i < n; i++) {
+      //  for (int i = n-1; i == 0; i--) {
             for (int j = 0; j < m; j++) {
+ //               System.out.print(inputArray[i][j] + " ");
+            }
+//            System.out.println();
+        }
+
+            for (int j = 0; j < m; j++) {
+                for (int i = n -1; i >= 0; i--) {
                 System.out.print(inputArray[i][j] + " ");
             }
             System.out.println();
         }
     }
 }
-//
+/*
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int[][] matrix = new int[scanner.nextInt()][scanner.nextInt()];
+        for (int i = 0; i < matrix.length; ++i) {
+            for (int j = 0; j < matrix[i].length; ++j) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+
+        for (int i = 0; i < matrix[0].length; ++i) {
+            for (int j = 0; j < matrix.length; ++j) {
+                System.out.print(matrix[matrix.length - j - 1][i] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+ */
